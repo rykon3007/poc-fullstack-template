@@ -1,0 +1,30 @@
+{
+    "name": "Next.js with SQLite",
+    "dockerFile": "Dockerfile",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/workspaces,type=bind"
+    ],
+    "forwardPorts": [3000],
+    "postCreateCommand": "npm install",
+    "remoteUser": "node",
+    "env": {
+      "DEVCONTAINER": "true"
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "20"
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode"
+        ]
+      }
+    }
+  }
+  
